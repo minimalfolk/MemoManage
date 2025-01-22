@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memojar User Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Memojar User Management</h1>
+    <div class="user-profile">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Admin" class="profile-icon">
+    </div>
+  </header>
+
+  <!-- Main Body -->
+  <main>
+    <!-- Active User Overview -->
+    <section id="active-users-overview">
+      <h2>Active Users Overview</h2>
+      <div class="stats">
+        <div>
+          <p>Total Users: <span id="total-users">0</span></p>
+          <p>Active Users: <span id="active-users">0</span></p>
+          <p>Verified Users: <span id="verified-users">0</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- User List Section -->
+    <section id="user-list">
+      <h2>All Active Users</h2>
+      <input type="text" id="search-bar" placeholder="Search for users..." oninput="searchUsers()">
+      <table>
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="users-table-body">
+          <!-- Dynamic user rows will go here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>©2025 Memojar</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
